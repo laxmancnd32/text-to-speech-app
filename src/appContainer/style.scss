@@ -1,0 +1,13 @@
+.app-container {
+    height: 100vh;
+    width: 100vw;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .main-container {
+        height: calc(100% - 40px);
+        overflow: scroll;
+    }
+}

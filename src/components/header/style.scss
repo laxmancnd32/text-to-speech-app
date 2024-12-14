@@ -1,0 +1,19 @@
+@use '../../variables.scss';
+
+.header-container {
+    background-color: variables.$header-color;
+    height: 40px;
+    display: flex;
+    padding: 0 10px;
+    width: 100%;
+    .head-section {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .header-left-section {
+        color: variables.$white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
