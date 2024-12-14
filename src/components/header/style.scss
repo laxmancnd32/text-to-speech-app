@@ -1,10 +1,9 @@
 @use '../../variables.scss';
 
 .header-container {
-    background-color: variables.$header-color;
-    height: 40px;
+    background-color: variables.$gray-800;
     display: flex;
-    padding: 0 10px;
+    padding: 30px;
     width: 100%;
     .head-section {
         display: flex;
@@ -12,7 +11,7 @@
         align-items: center;
     }
     .header-left-section {
-        color: variables.$white;
+        color: variables.$gray-300;
         font-size: 18px;
         font-weight: 600;
     }

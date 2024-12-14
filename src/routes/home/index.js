@@ -1,11 +1,10 @@
-import InputBox from "../../components/inputBox";
-
+import TtsContainer from "../../components/textToSpeechContainer";
 import "./style.scss";
 
 const Home = () => {
     return (
         <div className="home">
-          <InputBox />
+          <TtsContainer />
         </div>
       );
 }

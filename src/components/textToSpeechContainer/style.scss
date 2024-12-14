@@ -1,0 +1,35 @@
+@use '../../variables.scss';
+
+.tts-container {
+    display: flex;
+    height: 100%;
+    .tts-main {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        .tts-input {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 15px;
+            padding: 0 30px 30px 30px;
+            background-color: variables.$gray-800;
+            .text-area {
+                flex:1;
+                padding: 15px;
+            }
+            .actions {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+    .sidebar {
+        flex: 1;
+        background-color: variables.$gray-900;
+        color: variables.$gray-50;
+        .voices-container {
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '../../variables.scss';
+
+.voices-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden auto;
+    padding: 0 30px;
+    .title {
+        display: inline-block;
+        padding: 30px 0;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: variables.$gray-900;
+        color: variables.$gray-300;
+        position: sticky;
+        top: 0;
+    }
+    .voice-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .voice-item {
+            padding: 15px;
+            border-radius: 5px;
+            background-color: variables.$gray-800;
+            cursor: pointer;
+            .name-wrapper {
+                color: variables.$gray-300;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .voice-labels {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                .voice-label {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    padding: 2px 4px;
+                    background-color: variables.$gray-700;
+                    color: variables.$gray-400;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

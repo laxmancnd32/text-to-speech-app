@@ -1,0 +1,14 @@
+@use '../../variables.scss';
+
+.button {
+    cursor: pointer;
+    padding: 10px;
+    width: 250px;
+    color: variables.$gray-300;
+    background-color: variables.$gray-750;
+    border: none;
+    border-radius: 3px;
+    &:hover {
+        background-color: variables.$gray-700;
+    }
+}

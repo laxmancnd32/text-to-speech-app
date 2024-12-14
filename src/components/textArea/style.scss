@@ -1,0 +1,14 @@
+@use '../../variables.scss';
+
+.text-area {
+    border: none !important;
+    border-radius: 3px;
+    background-color: variables.$gray-750;
+    color: variables.$gray-200;
+    &::placeholder {
+        color: variables.$gray-400
+    }
+    &:focus {
+        outline: none;
+    }
+}
