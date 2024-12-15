@@ -20,37 +20,5 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .voice-item {
-            padding: 15px;
-            border-radius: 5px;
-            background-color: variables.$gray-800;
-            cursor: pointer;
-            &:hover {
-                background-color: variables.$gray-750;
-            }
-            .name-wrapper {
-                display: flex;
-                width: 100%;
-                font-size: 18px;
-                color: variables.$gray-300;
-                font-weight: 600;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-            .voice-labels {
-                display: flex;
-                gap: 8px;
-                flex-wrap: wrap;
-                .voice-label {
-                    margin-top: 5px;
-                    font-size: 14px;
-                    padding: 2px 4px;
-                    background-color: variables.$gray-700;
-                    color: variables.$gray-400;
-                    border-radius: 5px;
-                }
-            }
-        }
     }
 }

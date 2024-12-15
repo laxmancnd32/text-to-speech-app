@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import VoiceItem from "./voiceItem";
+import VoiceItem from "../../common/voiceItem";
 
 import { getVoices } from '../../apiService/api';
 
 import "./style.scss";
 
-const Voices = () => {
+const Voices = (props) => {
     const [voices, setVoices] = useState([]);
 
     useEffect(() => {
@@ -16,6 +16,7 @@ const Voices = () => {
         try {
             const { voices = [] } = await (await getVoices()).json();
             setVoices(voices);
+            props?.onVoiceSelect(voices[0]);
         } catch(err) {
         }
     }
@@ -25,9 +26,10 @@ const Voices = () => {
             <div className="title">Voices</div>
             <div className="voice-list">
                 {voices?.map((voice, i) => {
+                    const isSelected = props?.selectedVoice?.voice_id == voice?.voice_id;
                     return (
                         <React.Fragment key={`${i}`}>
-                            <VoiceItem voice={voice} />
+                            <VoiceItem isSelected={isSelected} voice={voice} onVoiceSelect={props?.onVoiceSelect} />
                         </React.Fragment>
                     )
                 })

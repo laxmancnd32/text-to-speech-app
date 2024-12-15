@@ -7,12 +7,14 @@
         width: 65%;
         display: flex;
         flex-direction: column;
+        background-color: variables.$gray-800;
+        padding: 15px;
         .tts-input {
             display: flex;
             flex-direction: column;
             flex: 1;
             gap: 15px;
-            padding: 0 30px 30px 30px;
+            padding: 15px;
             background-color: variables.$gray-800;
             .text-area {
                 flex:1;
@@ -20,7 +22,24 @@
             }
             .actions {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: space-between;
+                align-items: center;
+                gap: 15px;
+                .converted-speech-player {
+                    flex: 1;
+                }
+            }
+        }
+        .selected-voice-wrapper {
+            padding: 15px;
+            .selected-voice-title {
+                color: variables.$gray-50;
+                margin-bottom: 15px;
+            }
+            .voice-item {
+                // margin: 15px;
+                border: 1px solid variables.$gray-700;
+                border-radius: 3px;
             }
         }
     }
@@ -30,6 +49,21 @@
         color: variables.$gray-50;
         .voices-container {
             height: 100%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .tts-container {
+        flex-direction: column;
+        overflow-y: scroll;
+        .tts-main {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            .tts-input {
+                min-height: 175px;
+            }
         }
     }
 }

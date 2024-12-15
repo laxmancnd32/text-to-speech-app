@@ -1,0 +1,47 @@
+@use '../../variables.scss';
+
+.button {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: variables.$gray-900;
+    background-color: variables.$gray-50;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    &:hover {
+        background-color: variables.$gray-300;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        &:hover {
+            background-color: variables.$gray-50;
+        }
+        color: variables.$gray-300;
+    }
+
+    .loader {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border: 3px solid variables.$gray-900;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        top: calc(35%);
+        left: calc(50% - 15px);
+    }
+}
+
+/* Loader Animation */
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
